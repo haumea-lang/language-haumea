@@ -7,9 +7,54 @@
   {
     'include': '#comments'
   }
+  
+  {
+    # reserved words
+    'match': '\\b(to|with|is|return|do|end|if|then|else|let|be|forever|while|for|each|in|set|to|through|change|by|variable)'
+    'name': 'keyword.control.hau'
+  }
+  
+  {
+    # operators (characters)
+    'match': "(\\+|\\=|\\-|\\*|\\/|\\<|\\>|\\~|\\||\\&|\\(|\\)|\\!|>=|<=|!=)"
+    'name': 'keyword.operator.hau'
+  }
+  
+  {
+    # operators (keywords)
+    'match': "\\b(and|or|not|modulo)"
+    'name': 'keyword.operator.hau'
+  }
+  
+  {
+    # builtin function calls
+    'match': "(display)(\\()(?=.+\\))"
+    'captures':
+      '1':
+        'name': 'support.function.hau'
+      '2':
+        'name': 'keyword.operator.hau'
+  }
+  
+  {
+    # function calls
+    'match': "(\\w+)(\\()(?=.+\\))"
+    'captures':
+      '1':
+        'name': 'entity.name.function.hau'
+      '2':
+        'name': 'keyword.operator.hau'
+  }
+  
+  {
+    # integers
+    'match': '[0-9]+'
+    'name': 'constant.numeric.hau'
+  }
 ]
 'repository':
   'comments':
+    # /* ... */
     # currently does not support nested comments :(
     'begin': '/\\*'
     'beginCaptures':
