@@ -10,7 +10,7 @@
   
   {
     # reserved words
-    'match': '\\b(to|with|is|return|do|end|if|then|else|let|be|forever|while|for|each|in|set|to|through|change|by|variable)'
+    'match': '\\b(to|with|is|return|do|end|if|then|else|let|be|forever|while|for|each|in|set|to|through|change|by|variable)\\b'
     'name': 'keyword.control.hau'
   }
   
@@ -22,7 +22,7 @@
   
   {
     # operators (keywords)
-    'match': "\\b(and|or|not|modulo)"
+    'match': "\\b(and|or|not|modulo)\\b"
     'name': 'keyword.operator.hau'
   }
   
