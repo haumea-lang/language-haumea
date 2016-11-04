@@ -28,7 +28,7 @@
   
   {
     # builtin function calls
-    'match': "(display)(\\()(?=.+\\))"
+    'match': "(display|read)(\\()(?=.+\\))"
     'captures':
       '1':
         'name': 'support.function.hau'
