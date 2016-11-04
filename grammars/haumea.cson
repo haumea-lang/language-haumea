@@ -1,0 +1,22 @@
+'scopeName': 'source.hau'
+'name': 'Haumea'
+'fileTypes': [
+  'hau'
+]
+'patterns': [
+  {
+    'include': '#comments'
+  }
+]
+'repository':
+  'comments':
+    # currently does not support nested comments :(
+    'begin': '/\\*'
+    'beginCaptures':
+      '0':
+        'name': 'punctuation.definition.comment.hau'
+    'end': '\\*/'
+    'endCaptures':
+      '0':
+        'name': 'punctuation.definition.comment.hau'
+    'name': 'comment.block.hau'
